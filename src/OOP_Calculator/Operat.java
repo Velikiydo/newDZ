@@ -26,18 +26,11 @@ public class Operat {
                 Multiplication result3 = new Multiplication(num1, num2);
                 result3.showResult();
                 break;
-            case "/":
-                if (num2 != 0) {
+            case "/"://Исключение переехало в class Division
+
                     Division result4 = new Division(num1, num2);
                     result4.showResult();
-                }
-                if (num2 == 0) {
-                    try {
-                        throw new ArithmeticException();
-                    } catch (ArithmeticException a) {
-                        System.err.format("На ноль делить нельзя !!");
-                    }
-                }break;
+                break;
             default:
                 System.out.println("Не допустимое значение");
 

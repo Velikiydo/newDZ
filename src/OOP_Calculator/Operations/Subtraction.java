@@ -15,7 +15,7 @@ public class Subtraction implements Result {
         this.num1=num1;
         this.num2=num2;
     }
-    private double getResult(){
+    public double getResult(){
         result = num1 - num2;
         return result;
 
@@ -24,6 +24,8 @@ public class Subtraction implements Result {
     @Override
     public void showResult() {
         System.out.printf("Равно=%.4f",getResult());
+
+
 
     }
 }

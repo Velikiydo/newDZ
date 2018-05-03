@@ -1,4 +1,5 @@
 package OOP_Calculator.Operations;
+
 /**
  * Created by Velikiy Dmitriy
  */
@@ -6,21 +7,23 @@ package OOP_Calculator.Operations;
 // Задание 5 и 7
 
 
-public class Division  implements Result{
+public class Division implements Result {
     private double num1;
-    private  double num2;
+    private double num2;
     private double result;
 
-    public Division (double num1,double num2){
-        this.num1=num1;
-        this.num2=num2;
+    public Division(double num1, double num2) {
+        this.num1 = num1;
+        this.num2 = num2;
     }
-    private double getResult (){
+
+    public double getResult() throws ArithmeticException {
         result = num1 / num2;
+        if (num2 == 0) {
+            throw new ArithmeticException("Деление на 0 запрещено");
+        }
         return result;
-
     }
-
 
 
     @Override
